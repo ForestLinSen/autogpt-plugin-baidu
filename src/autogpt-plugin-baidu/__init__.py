@@ -52,7 +52,6 @@ class AutoGPTBaiduSearch(AutoGPTPluginTemplate):
         self, command_name: str, arguments: Dict[str, Any]
     ) -> Tuple[str, Dict[str, Any]]:
         if command_name == "google" and self.load_commands:
-            # this command does nothing but it is required to continue performing the post_command function
             return "baidu_search", {"query": arguments["query"]}
         else:
             return command_name, arguments
